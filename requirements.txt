@@ -1,0 +1,7 @@
+streamlit
+langchain_community
+langchain_openai
+langchain
+langchain_core
+selenium
+langchain_text_splitters
