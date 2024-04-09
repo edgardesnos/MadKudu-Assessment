@@ -1,3 +1,7 @@
+__import__("pysqlite3")
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
@@ -29,6 +33,3 @@ class LLMChatBot:
 
     def ask_question(self, question):
         return self.rag_chain.invoke(question)
-
-chatbot = LLMChatBot("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")
-print(chatbot.ask_question("What emojis are used for scoring purposes?"))
