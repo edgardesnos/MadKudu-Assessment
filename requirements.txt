@@ -3,6 +3,6 @@ langchain
 langchain_community
 langchainhub
 langchain_openai
-chromadb
+faiss-cpu
 selenium
 streamlit
